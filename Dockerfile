@@ -25,7 +25,9 @@ RUN sudo chown -R coder:coder /home/coder/.local
 # Install NodeJS
 RUN sudo curl -fsSL https://deb.nodesource.com/setup_15.x | sudo bash -
 RUN sudo apt-get install -y nodejs
-
+# Install Python
+RUN sudo apt-get install python3
+RUN sudo apt-get install python3-pip
 # Install a VS Code extension:
 # Note: we use a different marketplace than VS Code. See https://github.com/cdr/code-server/blob/main/docs/FAQ.md#differences-compared-to-vs-code
 # RUN code-server --install-extension esbenp.prettier-vscode
